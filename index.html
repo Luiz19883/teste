@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Max</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Estilos básicos para o menu */
+      nav.menu {
+        background-color: #333;
+        padding: 10px 0;
+        display: flex; /* Usando flexbox para alinhar os itens do menu */
+        justify-content: space-between; /* Distribui os itens e cria espaço entre eles */
+        align-items: center; /* Centraliza os itens verticalmente */
+        margin-bottom: 20px;
+      }
+
+      nav.menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+      }
+
+      nav.menu ul li {
+        margin: 0 15px;
+      }
+
+      nav.menu ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: color 0.3s; /* Suaviza a mudança de cor ao passar o mouse */
+      }
+
+      nav.menu ul li a:hover {
+        color: #f0c14b; /* Cor de destaque ao passar o mouse */
+      }
+
+      .logo-container {
+          display: flex;
+          align-items: center;
+      }
+      .logo-container img {
+          height: 40px; /* Ajuste a altura conforme necessário */
+          margin-right: 15px;
+      }
+        .menu-title{
+            color: white;
+            font-size: 1.5em;
+        }
+    </style>
+  </head>
+  <body>
+      <nav class="menu">
+          <div class="logo-container">
+              <img src="sua-logo.png" alt="Logo The Max"> <!-- Substitua "sua-logo.png" pelo caminho da sua imagem -->
+              <span class="menu-title">The Max</span>
+          </div>
+          <ul>
+              <li><a href="#scv">SCV</a></li>
+              <li><a href="#top10">Maior Compra/ Maior Vendas</a></li>
+              <li><a href="#">OB D Baleias</a></li>
+          </ul>
+      </nav>
+        <div id="scv">
+            <h1>Análise de Ativos - Sinais de Compra/Venda</h1>
+            <div class="token-display-card">
+              <span class="card-label">Token: </span><span id="token-display"></span>
+            </div>
+            <div class="search-container">
+              <input
+                type="text"
+                id="crypto-search"
+                placeholder="Buscar Criptomoeda..."
+              />
+              <button id="search-button">Buscar</button>
+            </div>
+            <div id="asset-table-body"></div>
+        </div>
+         <div id="top10">
+             <div id="top-10-futures"></div>
+         </div>
+
+    <script src="script.js"></script>
+    
+  </body>
+</html>
